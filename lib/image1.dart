@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-// Material
+// Material UI
 //Stateless Widget/ Statefull widget
+//assetImage/fileImage/NetworkImage/BinaryImage
 void main() {
   runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
 }
@@ -19,6 +20,9 @@ class Home extends StatelessWidget {
         ),
         title: const Text(
           "My testing app",
+          style: TextStyle(
+            color: Colors.black,
+          ),
         ),
         actions: [
           Icon(
@@ -28,15 +32,22 @@ class Home extends StatelessWidget {
         ],
         centerTitle: true,
       ),
-      body: const Center(
-          child: Text(
-        "Hello Follow",
-        style: TextStyle(
-            fontFamily: "Bruno Ace SC",
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-            color: Colors.redAccent),
-      )),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset("assets/heardPhone.jpg",
+            // width: 300,height: 300,fit: BoxFit.fill
+             ),
+            Image.asset("assets/djMusic.jpg",
+                // width: 300,height: 300,fit: BoxFit.fill
+              ),
+            Image.asset("assets/musicCatton.jpg",
+                // width: 300,height: 300,fit: BoxFit.fill
+            ),
+          ],
+        ),
+      ),
+
     );
   }
 }
