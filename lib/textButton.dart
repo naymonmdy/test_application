@@ -35,6 +35,41 @@ class MyApp extends StatelessWidget {
               ),
               label: Text("Alarm"),
             ),
+            TextButton(
+                style: TextButton.styleFrom(
+                  shadowColor: Colors.blue,
+
+                ),
+                onPressed: (){
+                  showSnackBar(context);
+                }, child:Text("Text Buttton",
+            style: TextStyle(
+              color: Colors.deepOrangeAccent,
+            ),)),
+            OutlinedButton(
+              style:OutlinedButton.styleFrom(
+                foregroundColor:Colors.indigo,
+                backgroundColor: Colors.white54,
+                side: BorderSide(color:Colors.red,width:3)
+              ),
+                onPressed: (){
+              showSnackBar(context);
+            }, child: Text("Outline Button")),
+            IconButton(
+                color:Colors.blue,
+                tooltip: "notification Button",
+                onPressed: (){
+
+            }, icon: Icon(Icons.notifications)),
+            FloatingActionButton(
+              child:Icon(Icons.notification_add),
+                onPressed: (){
+              showSnackBar(context);
+            }),
+            FloatingActionButton.extended(
+                onPressed: (){
+                  showSnackBar(context);
+                },label: Text("Floating Action Buttion"),)
           ],
         ),
       ),
