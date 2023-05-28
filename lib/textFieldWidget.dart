@@ -34,6 +34,9 @@ class _MyAppState extends State<MyApp> {
   bool _playing = false;
 
   String _info = "";
+  String _rdoMale="Male";
+  String _rdoFemale="Female";
+  String _groupValue="";
 
   @override
   Widget build(BuildContext context) {
@@ -108,13 +111,62 @@ class _MyAppState extends State<MyApp> {
                         }
                       });
                     }),
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Male"),
+                        Radio(
+                            activeColor: Colors.red,
+                            value:_rdoMale,
+                            groupValue:_groupValue,
+                            onChanged:(value)
+                        {
+                          if(value !=null)
+                            {
+                              setState(() {
+                                _groupValue=_rdoMale;
+                              });
+                            }
+                        }),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Female"),
+                        Radio(
+                            //activeColor: Colors.red,
+                            value:_rdoFemale,
+                            groupValue:_groupValue,
+                            fillColor: MaterialStateProperty.resolveWith((states)
+                            {
+                              if(states.contains(MaterialState.selected))
+                              {
+                                return Colors.indigo;
+                              }
+                              return Colors.black;
+                            }),
+                            onChanged:(value)
+                            {
+                              if(value !=null)
+                              {
+                                setState(() {
+                                  _groupValue=_rdoFemale;
+                                });
+                              }
+                            }),
+                      ],
+                    ),
                     OutlinedButton(
                       onPressed: () {
                         setState(() {
                           _info = "Name is ${_nameController.text}. "
                               "\nPhone Number is ${_phoneController.text}. "
                               "\nAddress is ${_addressController.text}."
-                              " \n ${hobbies()}";
+                              " \n ${hobbies()}"
+                              "\n Gender is $_groupValue";
                         });
                       },
                       child: Text("Generate Info"),
@@ -123,7 +175,6 @@ class _MyAppState extends State<MyApp> {
                       height: 20,
                     ),
                     Text(_info),
-
                   ],
                 ),
               )),
