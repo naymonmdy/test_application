@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:test_application/screen/firstScreen.dart';
+
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({Key? key}) : super(key: key);
@@ -7,9 +7,9 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Third Screen"),
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Third Screen"),
+      // ),
       body: Center(
         child: Column(
           children: [
