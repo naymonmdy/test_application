@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 //Stateless Widget/ Statefull widget
 //assetImage/fileImage/NetworkImage/BinaryImage
 void main() {
-  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
+  runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home()));
 }
 
 class Home extends StatelessWidget {

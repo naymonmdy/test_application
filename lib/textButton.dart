@@ -38,38 +38,42 @@ class MyApp extends StatelessWidget {
             TextButton(
                 style: TextButton.styleFrom(
                   shadowColor: Colors.blue,
-
                 ),
-                onPressed: (){
+                onPressed: () {
                   showSnackBar(context);
-                }, child:Text("Text Buttton",
-            style: TextStyle(
-              color: Colors.deepOrangeAccent,
-            ),)),
+                },
+                child: Text(
+                  "Text Buttton",
+                  style: TextStyle(
+                    color: Colors.deepOrangeAccent,
+                  ),
+                )),
             OutlinedButton(
-              style:OutlinedButton.styleFrom(
-                foregroundColor:Colors.indigo,
-                backgroundColor: Colors.white54,
-                side: BorderSide(color:Colors.red,width:3)
-              ),
-                onPressed: (){
-              showSnackBar(context);
-            }, child: Text("Outline Button")),
-            IconButton(
-                color:Colors.blue,
-                tooltip: "notification Button",
-                onPressed: (){
-
-            }, icon: Icon(Icons.notifications)),
-            FloatingActionButton(
-              child:Icon(Icons.notification_add),
-                onPressed: (){
-              showSnackBar(context);
-            }),
-            FloatingActionButton.extended(
-                onPressed: (){
+                style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.indigo,
+                    backgroundColor: Colors.white54,
+                    side: BorderSide(color: Colors.red, width: 3)),
+                onPressed: () {
                   showSnackBar(context);
-                },label: Text("Floating Action Buttion"),)
+                },
+                child: Text("Outline Button")),
+            IconButton(
+                color: Colors.blue,
+                tooltip: "notification Button",
+                onPressed: () {},
+                icon: Icon(Icons.notifications)),
+            FloatingActionButton(
+                child: Icon(Icons.notification_add),
+                onPressed: () {
+                  showSnackBar(context);
+                }),
+            //floating action button with text
+            FloatingActionButton.extended(
+              onPressed: () {
+                showSnackBar(context);
+              },
+              label: Text("Floating Action Buttion"),
+            )
           ],
         ),
       ),

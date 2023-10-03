@@ -37,15 +37,16 @@ class Home extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: Colors.indigo,
-            border: Border.all(color:Colors.red,width: 2),
-            borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight:Radius.circular(10)),
-
+            border: Border.all(color: Colors.red, width: 2),
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(40), topRight: Radius.circular(10)),
           ),
           padding: EdgeInsets.all(20),
           margin: EdgeInsets.fromLTRB(20, 20, 0, 20),
           child: Text(
-              "A wiki (/ˈwɪki/ (listen) WIK-ee) is an online hypertext publication collaboratively edited and managed by its own audience, using a web browser. A typical wiki contains multiple pages for the subjects or scope of the project, and could be either open to the public or limited to use within an organization for maintaining its internal knowledge base.",
-          style: TextStyle(color: Colors.white),),
+            "A wiki (/ˈwɪki/ (listen) WIK-ee) is an online hypertext publication collaboratively edited and managed by its own audience, using a web browser. A typical wiki contains multiple pages for the subjects or scope of the project, and could be either open to the public or limited to use within an organization for maintaining its internal knowledge base.",
+            style: TextStyle(color: Colors.white),
+          ),
         ));
   }
 }
